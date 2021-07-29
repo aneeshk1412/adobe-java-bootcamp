@@ -3,6 +3,7 @@ package com.adobe.prj.dao;
 /**
  * Provides Implementation for a Custom Exception Class
  * for the Product DAO
+ * Currently does not do much, calls all methods from its super
  */
 public class ProductDaoException extends Exception {
 	private static final long serialVersionUID = 1L;

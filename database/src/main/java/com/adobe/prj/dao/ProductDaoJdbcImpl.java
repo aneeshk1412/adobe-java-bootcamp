@@ -10,6 +10,10 @@ import java.util.List;
 
 import com.adobe.prj.entity.Product;
 
+/**
+ * Implementation of the Product DAO interface
+ * for MySQL Database Persistent Storage
+ */
 public class ProductDaoJdbcImpl implements ProductDao {
 	private static String DRIVER = "com.mysql.cj.jdbc.Driver";
 	private static String URL = "jdbc:mysql://localhost:3306/adobe-java-bootcamp";
