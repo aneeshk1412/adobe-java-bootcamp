@@ -51,7 +51,7 @@ public class Product implements Comparable<Product> {
 	
 	@Override
 	public String toString() {
-		return "Product: {id: " + this.id + ", name: " + this.name + ", category: " + this.category + ", price: " + this.price + "}"
+		return "Product: {id: " + this.id + ", name: " + this.name + ", category: " + this.category + ", price: " + this.price + "}";
 	}
 	
 	@Override
