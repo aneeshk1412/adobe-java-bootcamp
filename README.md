@@ -29,3 +29,15 @@ D -> Dependency Injection
 
 PS: Missing Zen of Python :(
 
+
+
+## Spring Boot 
+
+Metadata Methods:
+* Annotations
+* XML/YML
+
+Metadata keeps dependency tracking of all the beans in the Spring Container.
+Wiring (Dependency Graph) between beans (Objects) is managed by the Spring Container.
+So, we can pull an object easily.
+Spring Container does an inversion of control. (Injects the Dependency into the Object that needs it).
