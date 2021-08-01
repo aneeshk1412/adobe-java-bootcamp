@@ -107,7 +107,26 @@ E.g.: "com.adobe.prj"."classtype"
 
 
 ## Abstract Classes
- 
+
+Abstract Classes are used to define abstract entities. 
+These are entities which are not tangible but are an abstraction over multiple entities.
+E.g., Product is an Abstract Entity, TV, Laptop, Smartphone, etc. are derived entities from it.
+
+Such classes are marked ```abstract```.
+* If a class is marked ```abstract```, then all the ```abstract``` methods in the class have to be implemented by the class that is derived from it.
+* If a class has even one ```abstract``` method, then the class has to be declared ```abstract```.
+* An ```abstract``` class may or may not have ```abstract``` methods.
+
+
+## Interfaces
+
+Why use interfaces?
+1. Design
+2. Implementation
+3. Testing
+4. Integration
+5. Loose Coupling
+
 
 ## Spring Boot 
 
