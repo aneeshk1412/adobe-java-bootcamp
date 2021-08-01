@@ -66,6 +66,25 @@ Java Bytecodes are not self-contained. They need an interpreter to run.
 
 7. Exception Classes
 
+Each such category of classes is logically grouped in a different package.
+E.g.: "com.adobe.prj"."classtype"
+
+
+## Object Oriented Programming Rules
+
+### Inheritence in Java
+
+* Utilizes the ```extends``` keyword.
+* Java does not support multiple inheritance (good job)
+* A superclass reference can dynamically bind to a subclass object, and call the subclass methods. The type of the reference is determined at compile time.
+
+### Overriding Rules
+
+* since ```private``` is not visible, it cannot be overriden.
+* overriding cannot decrease visibility, i.e. cannot override ```public``` function to ```private```
+* Visibility order : ```private``` -> ```default``` -> ```protected``` -> ```public```
+* Method name and Arguments should be same, return type can be same or a subclass.
+* Variables and static methods are not overriden, but shadowed.
 
 ## Spring Boot 
 
