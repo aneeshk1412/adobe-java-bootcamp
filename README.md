@@ -51,12 +51,13 @@ Java Bytecodes are not self-contained. They need an interpreter to run.
 	* These are mostly directly mapped to an entity as defined in an RDBMS
 
 2. Data Access Object Classes (DAO)
-	* These implement CRUD Operations \[Create, READ, UPDATE, DELETE\]
+	* These implement CRUD Operations \[CREATE, READ, UPDATE, DELETE\]
+	* Also possible implementations may have \[INSERT, DELETE, UPDATE, SELECT (wit or without condition)\], like in SQL
 	* Data Acsess Objects define an interface
 	* One can implement Data Access from different persistent data storages
 	* Thus, these are fine grained operations
 
-3. Service
+3. Service Classes
 
 4. Data Transfer Objects Classes (DTO)
 
@@ -85,6 +86,28 @@ E.g.: "com.adobe.prj"."classtype"
 * Visibility order : ```private``` -> ```default``` -> ```protected``` -> ```public```
 * Method name and Arguments should be same, return type can be same or a subclass.
 * Variables and static methods are not overriden, but shadowed.
+
+
+## Types of Comments in Java
+
+1. Developer Comments
+	* Single Line ```\\```
+	* Multi Line ```\*    *\```
+2. Documentation Comments  ```\** *\```
+	* They support annotations with highlighting and stuff which makes a good documentation (similar to markdown)
+	* Documentation comments can be exported to HTML
+
+
+## Commenting Style to follow
+
+* **Variables and Methods** : camelCase, first letter small
+* **Classes and Interfaces** : CamelCase, first letter capital
+* **Constants** (keyword ```final```) : SNAKE_CASE, all capital
+* **XML / YML / HTML** : spine-case
+
+
+## Abstract Classes
+ 
 
 ## Spring Boot 
 
