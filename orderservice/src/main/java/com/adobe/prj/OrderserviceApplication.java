@@ -31,11 +31,7 @@ public class OrderserviceApplication implements CommandLineRunner {
         // get called once spring container is created
         @Override
         public void run(String... args) throws Exception {
-//                listProducts();
-//                addProduct();
-                
-//                getCustomer();
-//                createOrder();
+        	
         }
         
         private void customQuery() {
