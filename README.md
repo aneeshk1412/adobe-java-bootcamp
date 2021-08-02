@@ -120,6 +120,12 @@ Such classes are marked ```abstract```.
 
 ## Interfaces
 
+(Realization Relationship)
+
+An Interface is a design contract. It describes certain things that a particular implementation of that interface will do.
+
+It consists of only method signatures and constants (```static``` and ```final```)
+
 Why use interfaces?
 1. Design
 2. Implementation
@@ -127,6 +133,58 @@ Why use interfaces?
 4. Integration
 5. Loose Coupling
 
+A class can implement multiple interfaces. Keyword is ```implements```.
+If a class does not implement all the methods in the interface, it has to be abstract.
+
+An interface:
+* declares only method headers and public constants.
+* cannot be instantiated.
+* can be implemented by a class.
+* cannot extend a class.
+* can extend several other interfaces.
+
+```java
+interface Swim { void swim(); }
+
+interface Dance { void dance(); }
+
+interface Fight { void fight(); }
+
+class Actor implements Dance { 
+	public void dance() { /* logic */ } 
+}
+
+class Hero extends Actor implements Swim, Fight { 
+	public void fight() { /* logic */ } 
+	public void swim() { /* logic */ } 
+}
+```
+
+Anonymous Class
+
+![TODO]
+
+
+## Data Structures in Java
+
+
+## Common Higher Order Functions in Java
+
+
+## Exception Handling in Java
+
+**Exception** : Abnormality in a code or in its execution.
+Types of Exceptions:
+* Compile Time Exceptions (Checked Exceptions)
+	* Compiler forces to handle using try-catch
+	* Happens due to reasons outside JRE
+* Run Time Exceptions (Unchecked Exceptions)
+	* Compiler doesn't force to handle these
+	* Happens due to reasons within JRE
+* Error (Something to not recover from)
+	* Logical
+	* Compilation
+	* Runtime
 
 ## Spring Boot 
 
