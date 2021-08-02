@@ -7,6 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.adobe.prj.dao.OrderDao;
+import com.adobe.prj.dto.ReportDTO;
 import com.adobe.prj.entity.Customer;
 import com.adobe.prj.entity.Item;
 import com.adobe.prj.entity.Order;
@@ -19,6 +21,9 @@ public class OrderserviceApplication implements CommandLineRunner {
         @Autowired
         private OrderService orderService;
         
+        @Autowired
+    	private OrderDao orderDao;
+        
         public static void main(String[] args) {
                 SpringApplication.run(OrderserviceApplication.class, args);
         }
@@ -30,9 +35,21 @@ public class OrderserviceApplication implements CommandLineRunner {
 //                addProduct();
                 
 //                getCustomer();
-                createOrder();
+//                createOrder();
         }
-
+        
+        private void customQuery() {
+//    		List<Product> products = orderService.getProductsPriceRange(5000, 1_00_000);
+//    		for(Product p : products) {
+//    			System.out.println(p);
+//    		}
+    		
+    		List<ReportDTO> reports = orderDao.getReport();
+    		for(ReportDTO r : reports) {
+    			System.out.println(r.getEmail() +", " + r.getFirstName() +", " + r.getOrderDate() +", " + r.getTotal());
+    		}
+    	}
+        
         private void createOrder() {
                 Customer c = new Customer();
                 c.setEmail("sam@adobe.com");

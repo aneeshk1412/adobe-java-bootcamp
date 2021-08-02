@@ -5,8 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
-@Table(name="products")
+@Table(name = "products")
 @Entity
 public class Product implements Comparable<Product> {
 
@@ -14,11 +16,17 @@ public class Product implements Comparable<Product> {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@NotBlank(message = "Name is required")
 	private String name;
+	
+	@Min(value=10, message="Price ${validatedValue} should be more than {value}")
 	private double price;
+	
 	private String category;
+	
+	@Min(value = 0, message="Quantity ${validatedValue} should be more than {value}")
 	private int quantity;
-
+	
 	public Product() {
 	}
 
